@@ -11,11 +11,11 @@ export class CustomerListComponent implements OnInit {
   private _customers: ICustomer[] = [];
 
   filteredCustomers: ICustomer[];
-  customersOrderTotal:number;
-  
+  customersOrderTotal: number;
+
 
   @Input() get customers(): ICustomer[] {
-    return this._customers
+    return this._customers;
   }
   set customers(value: ICustomer[]) {
     if(value) {
@@ -30,9 +30,9 @@ export class CustomerListComponent implements OnInit {
   calculateOrders = () => {
 
     this.customersOrderTotal = 0;
-    this.filteredCustomers.forEach((customer:ICustomer)=>  {
+    this.filteredCustomers.forEach((customer: ICustomer)=>  {
       this.customersOrderTotal += customer.orderTotal;
-    })
-  } 
+    });
+  }
 
 }
